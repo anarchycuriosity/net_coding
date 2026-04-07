@@ -1,0 +1,4 @@
+src文件夹来存放源文件
+inc文件夹来写三个文件，socket，server_socket,client_socket来实现socket的继承和封装
+build文件夹来构建
+CMakeLists.txt

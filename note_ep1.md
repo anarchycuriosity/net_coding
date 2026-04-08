@@ -78,3 +78,6 @@ ptr = (int *) std::malloc(5 * sizeof(int));
 //我们常常用new
 type_T是占位符
 ```
+
+mv {a,b,c} d并不需要-r
+因为只需要改动映射表即可，与rm和cp不一样

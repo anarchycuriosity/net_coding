@@ -1,0 +1,3 @@
+/home/curiosity/my_code/net_coding/ep1/build/CMakeFiles/ep1.dir
+/home/curiosity/my_code/net_coding/ep1/build/CMakeFiles/edit_cache.dir
+/home/curiosity/my_code/net_coding/ep1/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/ep1.dir/src/client.cpp.o CMakeFiles/ep1.dir/src/server.cpp.o CMakeFiles/ep1.dir/src/socket.cpp.o -o /home/curiosity/code_practice/net_coding/ep1/bin/ep1 

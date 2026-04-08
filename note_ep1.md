@@ -78,3 +78,7 @@ ptr = (int *) std::malloc(5 * sizeof(int));
 //我们常常用new
 type_T是占位符
 ```
+
+如果子文件夹的插件不生效
+ctrl + shift + p输入cmake config让插件配置即可f5一键编译
+你甚至可以不需要.vscode文件夹,因为cmake tools的插件驱动优于手动配置

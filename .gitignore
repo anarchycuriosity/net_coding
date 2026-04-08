@@ -2,3 +2,7 @@ bin/*
 !bin/.gitignore
 build/*
 !build/.gitignore
+# .gitignore 内容
+build/
+bin/
+.vscode/

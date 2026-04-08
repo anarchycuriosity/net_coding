@@ -1,0 +1,2 @@
+/home/curiosity/my_code/net_coding/build/CMakeFiles/edit_cache.dir
+/home/curiosity/my_code/net_coding/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/ep1.dir/src/get_time_client.cpp.o -o /home/curiosity/my_code/net_coding/ep1/bin/ep1 

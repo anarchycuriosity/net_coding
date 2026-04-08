@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/curiosity/my_code/net_coding/ep1/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/ep1.dir/src/get_time_client.cpp.o -c /home/curiosity/my_code/net_coding/ep1/src/get_time_client.cpp",
+  "file": "/home/curiosity/my_code/net_coding/ep1/src/get_time_client.cpp",
+  "output": "CMakeFiles/ep1.dir/src/get_time_client.cpp.o"
+}
+]

@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.28.3)
+project(ep1)
+file(GLOB SRC ${PROJECT_SOURCE_DIR}/src/*.cpp)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+add_executable(${PROJECT_NAME} ${SRC})

@@ -110,7 +110,7 @@ err_sys函数输出报错信息
 3把套接字转化为监听套接字
 4接受用户连接,发送应答
 5终止
-listen(listenfd,LISTENQ)函数把该套接字转化为一个监听套接字,而不是仅仅创建一个普通的socket,LISTENQ是再unp.h中定义的最大客户连接数.准备过程包括这三个函数的调用socket biind listen准备监听描述符listen descriptor也就是listenfd
+listen(listenfd,LISTENQ)函数把该套接字转化为一个监听套接字,而不是仅仅创建一个普通的socket,LISTENQ是再unp.h中定义的最大客户连接数.准备过程包括这三个函数的调用socket bind listen准备监听描述符listen descriptor也就是listenfd
 
 snprintf()的第二个参数要求指定目的缓冲区的大小来确保缓冲区不会溢出,替换sprint
 
@@ -166,3 +166,28 @@ type_T是占位符
 如果子文件夹的插件不生效
 ctrl + shift + p输入cmake config让插件配置即可f5一键编译
 你甚至可以不需要.vscode文件夹,因为cmake tools的插件驱动优于手动配置
+
+第一题
+unp仓库如何测试？
+对于13端口只有root用户才能调用，所以我们要写sudo
+先sudo运行服务器，然后新建终端运行客户端
+报错信息：usage: a.out <IPaddress>
+客户端必须指定地址才能调用服务
+
+如何获得网络拓扑的信息
+netstat -r
+或者
+netstat -rn
+
+1.2尝试修改cli程序的ip地址
+比如改为128.1.1.1
+cli运行成功但是什么都不会返回，因为对应接口根本没有套接
+其实srv写了addr_any
+
+1.3尝试改cli程序的AF参数为9999会输出
+socket error: Address family not supported by protocol
+
+err_sys封装的strerror只是得到了简明信息，从errno中
+如果我想查err_sys的实现文件而不是只能看到.h呢
+grep -rn "err_sys" .
+n参数可以让我们拿到行号，然后利用vsc编辑器的ctrl + g实现快速跳转

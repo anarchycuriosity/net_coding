@@ -5,3 +5,13 @@
 // 比如close函数
 #include <iostream>
 #include <cstring> //cpp输入流和strerror
+using SA = struct sockaddr;
+// int SERV_PORT = 9877;
+#define SERV_PORT 9877
+
+// int listen_backlog = 128;
+
+#define listen_backlog 128
+typedef int fd;
+// int MAXLINE = 4096; // 也就是4kb
+#define MAXLINE 4096

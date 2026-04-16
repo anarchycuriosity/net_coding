@@ -1,0 +1,28 @@
+STCP stream transmission protocol 流式控制传输协议
+MTU maximum transmission unit 最大传输单元
+DF位 don't fragment ，ipv4有，ipv6有隐藏DF位
+The Internet Assigned Numbers Authority (IANA)
+ipv4套接字地址结构 sockaddr_in <netinet/in.h>
+OSI（开放系统互连）模型是国际标准化组织（ISO）定义的七层网络架构标准，用于标准化计算机间的通信。它从上到下分为：应用层、表示层、会话层、传输层、网络层、数据链路层和物理层。Open Systems Interconnection protocols
+显式和隐式的区别其实就是是否有人为写上去的代码来决定这个行为是否实现
+地址和端口号在套接字地址结构中总是以网络字节序来储存而不是主机字节序
+高位字节存在低位而不是高位，与x86/ARM不同
+.
+套接字地址结构需要显示转化，这是因为这个结构体定义在ANSIC之前无法使用void *通用指针
+套接字地址结构有5种,ipv4,ipv6，数据链路，unix域和储存                                           
+
+引入一点窗口操作
+alt + tab可以在最近的两个当前桌面的窗口跳
+win + 左/右 可以实现
+
+每个socket其实都有一个引用计数，当fork后只是它的引用计数+1或close后-1
+只有当这个计数归零的时候，socket才会被内核销毁
+socket内部关联了一个PCB，其他部分有点复杂暂时不做讨论
+这个pcb包括了
+1五元组 5-turple：源地址目标地址源端口目标端口和协议
+2状态status:比如established和waited
+3缓冲区：接受缓冲区和发送缓冲区。
+双端的status不断变化，在缓冲区中不断写入读取数据和对齐
+
+listen_fd并没有特定的数据，它只是维护着连接队列和未连接队列，共同组成第二个参数backlog的大小
+这个队列的本质其实是指针数组或者链表，真正的数据在内核的一块区域中

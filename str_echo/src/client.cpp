@@ -14,6 +14,8 @@ void str_cli(FILE *fp, fd sock_fd)
             printf("str_cli: server terminated prematurely\n");
             exit(1);
         }
+        // 如果不显式指定终止符的话会出现乱码和神秘换行，因为他会一直读直到边界，我们要手动指定边界
+        resvline[n] = '\0';
         fputs(resvline, stdout);
     }
 
